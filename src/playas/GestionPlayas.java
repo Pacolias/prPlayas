@@ -34,13 +34,13 @@ public class GestionPlayas {
 
 				incluye(new Playa(sc.next(), sc.next(), sc.nextDouble(), sc.nextDouble(), sc.nextInt()));
 			} catch (PlayaException e) {
-				e.getMessage();
+				System.err.println(e.getMessage());
 
 			} catch (InputMismatchException e) {
-				System.out.println("ERROR. Valor no numerico");
+				System.err.println("ERROR. Valor no numerico");
 
 			} catch (NoSuchElementException e) {
-				System.out.println("ERROR. Faltan datos");
+				System.err.println("ERROR. Faltan datos");
 			}
 		}
 	}
