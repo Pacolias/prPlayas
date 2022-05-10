@@ -16,19 +16,19 @@ public class PlayaRestringida extends Playa {
 		porcentaje = p;
 	}
 
-	@Override
+		@Override
 	public void setNumPersonas(int n) {
 		super.setNumPersonas(n);
 
 		if (n == 0)
 			estado = "VACIO";
-		else if (n > 0 && n < super.getAforoMaximo() * 0.25 * porcentaje)
+		else if (n > 0 && n < super.getAforoMaximo() * 0.25 * porcentaje/100)
 			estado = "LEVE";
-		else if (n > super.getAforoMaximo() * 0.25 * porcentaje && n < super.getAforoMaximo() * 0.75 * porcentaje)
+		else if (n > super.getAforoMaximo() * 0.25 * porcentaje/100 && n < super.getAforoMaximo() * 0.75 * porcentaje/100)
 			estado = "MODERADO";
-		else if (n > super.getAforoMaximo() * 0.75 * porcentaje && n < super.getAforoMaximo() * porcentaje)
+		else if (n > super.getAforoMaximo() * 0.75 * porcentaje/100 && n < super.getAforoMaximo() * porcentaje/100)
 			estado = "SATURADO";
-		else
+		else if (n >= super.getAforoMaximo() * porcentaje/100)
 			estado = "SIN ESPACIO";
 	}
 
