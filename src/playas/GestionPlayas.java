@@ -89,15 +89,15 @@ public class GestionPlayas {
 
 		} catch (IOException e) {
 
-			System.out.println("ERROR: Archivo no encontrado");
+			System.err.println("ERROR: Archivo no encontrado");
 
 		} catch (InputMismatchException e) {
 
-			System.out.println("ERROR. Valor no numerico");
+			System.err.println("ERROR. Valor no numerico");
 
 		} catch (NoSuchElementException e) {
 
-			System.out.println("ERROR. Faltan datos");
+			System.err.println("ERROR. Faltan datos");
 		}
 	}
 
